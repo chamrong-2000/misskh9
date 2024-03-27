@@ -1,0 +1,1 @@
+alert("connect script successfully.")
