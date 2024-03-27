@@ -14,5 +14,4 @@ function wrapElements() {
 // Call the function when the document is ready
 document.addEventListener('DOMContentLoaded', function() {
     wrapElements(); // Call the function to wrap elements
-    alert("connect script successfully.");
 });
