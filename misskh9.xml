@@ -23,6 +23,7 @@
 
         <link href='https://unpkg.com/video.js/dist/video-js.css' rel='stylesheet'/>
         <script src='https://unpkg.com/video.js/dist/video.js'/>
+
         <!-- Template Style CSS -->
         <b:skin version='1.0.0'><![CDATA[/*
 -----------------------------------------------
@@ -76,6 +77,30 @@ border: 1px solid #d3dce6 !important;
     font-size: 14px !important;
     margin: 0 2px !important;
 }
+
+/*////////////////////////////////////////*/
+			Customize THEMES
+/*////////////////////////////////////////*/
+.blog-posts .blog-post-comments.comments-system-blogger, .post-footer {
+	display:none !important;
+}
+
+@media screen and (max-width: 880px)
+.header-menu {
+    padding: 0 !important;
+}
+
+#top-bar {
+    background-color: #000000 !important;
+}
+
+@media screen and (max-width: 880px)
+.header-menu {
+    border: none !important;
+    padding: 0 !important;
+    border-top: 0px solid #6200ea !important;
+}
+
 
 /*-- Reset CSS --*/
 #google_translate_element { clear: both; }.thread-expanded .thread-count a { display: none; }.comments .continue { display: none!important; } a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{
@@ -145,6 +170,10 @@ abbr{
 }
 .widget > h2,.widget > h3{
     display:none
+}
+
+.header-logo {
+    display: none !important;
 }
 
 /*-- Body Content CSS --*/
@@ -643,7 +672,7 @@ ul.social-counter{margin:0 -5px}
 #footer-wrapper #LinkList1 ul li{width:auto;display:-webkit-inline-box;float:left}
 #footer-wrapper #LinkList1 ul li a{display:block;padding:6px 2px;color:#fff;margin-right:10px}
 #footer-wrapper #LinkList1 ul li:last-child a{margin-right:0px}
-#footer-wrapper{padding:0px 0;background-color:$(main.dark.color)}
+#footer-wrapper{padding:0px 0;background-color:#000}
 #footer-wrapper .container{position:relative;overflow:hidden;margin:0 auto;padding:40px 0}
 .footer-widgets-wrap{position:relative;display:flex;margin:0 -15px}
 #footer-wrapper .footer{display:inline-block;float:left;width:70%;box-sizing:border-box;padding:0 15px}
@@ -671,7 +700,7 @@ ul.social-counter{margin:0 -5px}
 .footer .BlogSearch .search-input{background-color:rgba(255,255,255,0.05);color:$(footer.color);border-color:rgba(255,255,255,0.05)}
 .footer .contact-form-name,.footer .contact-form-email,.footer .contact-form-email-message{background-color:rgba(255,255,255,0.05);color:$(footer.color);border-color:rgba(255,255,255,0.05)}
 .footer .BlogSearch .search-action:hover,.footer .FollowByEmail .follow-by-email-inner .follow-by-email-submit:hover,.footer .contact-form-button-submit:hover{background-color:rgba(0,0,0,0.3)}
-#sub-footer-wrapper{background-color:$(main.dark.color);color:$(footer.color);display:block;padding:0;width:100%;overflow:hidden}
+#sub-footer-wrapper{background-color:#000000;color:$(footer.color);display:block;padding:0;width:100%;overflow:hidden}
 #sub-footer-wrapper .container{border-top: 1px solid #e0e0e0;position:relative;overflow:hidden;margin:0 auto;padding:20px 0}
 #sub-footer-wrapper .copyright-area{font-size:12px;display:inline-block;height:34px;line-height:34px;text-align:center;text-transform:uppercase;font-weight:400}
 #sub-footer-wrapper .copyright-area a{color:$(main.color);transition:color .17s}
@@ -907,12 +936,13 @@ height:auto;
 }
 
 .header-menu {
-    border-top: 4px solid $(main.color);
+    // border-top: 4px solid $(main.color);
+    border: none;
     width: 100%;
     height: 50px;
     position: relative;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0;
     background-color: #000;
 }
 .show-search, .hide-search {
@@ -1884,17 +1914,6 @@ display:block;
                     </b:includable>
                 </b:widget>
                 <b:widget id='LinkList71' locked='true' title='Default Variables' type='LinkList' version='2' visible='true'>
-                    <b:widget-settings>
-                        <b:widget-setting name='link-3'>9</b:widget-setting>
-                        <b:widget-setting name='sorting'>NONE</b:widget-setting>
-                        <b:widget-setting name='text-1'>commentsSystem</b:widget-setting>
-                        <b:widget-setting name='link-1'>blogger</b:widget-setting>
-                        <b:widget-setting name='text-0'>disqusShortname</b:widget-setting>
-                        <b:widget-setting name='link-2'>true</b:widget-setting>
-                        <b:widget-setting name='text-3'>postPerPage</b:widget-setting>
-                        <b:widget-setting name='link-0'>soratemplates</b:widget-setting>
-                        <b:widget-setting name='text-2'>fixedSidebar</b:widget-setting>
-                    </b:widget-settings>
                     <b:includable id='main'>
                         <b:include name='content'/>
                     </b:includable>
@@ -1929,15 +1948,15 @@ display:block;
             <div id='top-bar'>
                 <div class='container row'>
                     <b:section class='header-logo' id='header-logo' maxwidgets='1' name='Header Logo' showaddelement='yes'>
-                        <b:widget id='Header1' locked='true' title='MissKH9 (Header)' type='Header' version='2' visible='true'>
+                        <b:widget id='Header1' locked='true' title='MISSKH9 (Header)' type='Header' version='2' visible='false'>
                             <b:widget-settings>
-                                <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEjH9Qzvb0K6igTL-V99X4BA6hyi1dQMc0no5WqiPBjQ_pAuUKLA8R_m7pZfKyoBIunD_co1b3jkR3aoZsQSh4Lhxg_YjysZ5FUiuyUGAQ8ocEaKlBCdXBBMlOHimizNAXps-ZVSxP_yBsqNyjuibKjVpZOGecSINEvKys8UJZTLZKvvt0JBbErOTu4UaU72=s289</b:widget-setting>
-                                <b:widget-setting name='displayHeight'>289</b:widget-setting>
+                                <b:widget-setting name='displayUrl'/>
+                                <b:widget-setting name='displayHeight'>0</b:widget-setting>
                                 <b:widget-setting name='sectionWidth'>286</b:widget-setting>
-                                <b:widget-setting name='useImage'>true</b:widget-setting>
-                                <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
-                                <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-                                <b:widget-setting name='displayWidth'>286</b:widget-setting>
+                                <b:widget-setting name='useImage'>false</b:widget-setting>
+                                <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                                <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+                                <b:widget-setting name='displayWidth'>0</b:widget-setting>
                             </b:widget-settings>
                             <b:includable id='main' var='this'>
                                 <div class='header-widget'>
@@ -2090,19 +2109,19 @@ display:block;
                                     <b:widget-setting name='showDateHeader'>false</b:widget-setting>
                                     <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
                                     <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-                                    <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                                    <b:widget-setting name='showShareButtons'>false</b:widget-setting>
                                     <b:widget-setting name='authorLabel'>by</b:widget-setting>
-                                    <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                                    <b:widget-setting name='showCommentLink'>false</b:widget-setting>
                                     <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-                                    <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                                    <b:widget-setting name='showAuthor'>false</b:widget-setting>
                                     <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
                                     <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
                                     <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                                     <b:widget-setting name='timestampLabel'/>
                                     <b:widget-setting name='reactionsLabel'/>
-                                    <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+                                    <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
                                     <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-                                    <b:widget-setting name='showLabels'>true</b:widget-setting>
+                                    <b:widget-setting name='showLabels'>false</b:widget-setting>
                                     <b:widget-setting name='showLocation'>false</b:widget-setting>
                                     <b:widget-setting name='postLabelsLabel'>Tags</b:widget-setting>
                                     <b:widget-setting name='showTimestamp'>true</b:widget-setting>
@@ -2890,7 +2909,7 @@ display:block;
                     <div id='sidebar-wrapper'>
                         <b:section class='sidebar common-widget' id='sidebar1' name='Sidebar Right (A)' showaddelement='yes'/>
                         <b:section class='sidebar' id='social-widget' maxwidgets='1' name='Social Widget' showaddelement='yes'>
-                            <b:widget id='LinkList75' locked='true' title='Social Plugin' type='LinkList' version='2' visible='true'>
+                            <b:widget id='LinkList75' locked='true' title='Social Plugin' type='LinkList' version='2' visible='false'>
                                 <b:widget-settings>
                                     <b:widget-setting name='link-7'>https://www.youtube.com/channel/UCb4RL4Foz32ceodPKeFKyEg</b:widget-setting>
                                     <b:widget-setting name='link-5'>#</b:widget-setting>
@@ -2926,7 +2945,7 @@ display:block;
                             </b:widget>
                         </b:section>
                         <b:section class='sidebar common-widget' id='sidebar2' name='Sidebar Right (B)' showaddelement='yes'>
-                            <b:widget id='HTML6' locked='false' title='Facebook' type='HTML' version='2' visible='true'>
+                            <b:widget id='HTML6' locked='false' title='Facebook' type='HTML' version='2' visible='false'>
                                 <b:widget-settings>
                                     <b:widget-setting name='content'><![CDATA[<center><div class="fb-page" data-href="https://web.facebook.com/onekhexplainmovies2000" data-width="360" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></center>]]></b:widget-setting>
                                 </b:widget-settings>
@@ -2937,7 +2956,7 @@ display:block;
                                     </div>
                                 </b:includable>
                             </b:widget>
-                            <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='2' visible='true'>
+                            <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='2' visible='false'>
                                 <b:widget-settings>
                                     <b:widget-setting name='numItemsToShow'>2</b:widget-setting>
                                     <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -3263,11 +3282,11 @@ display:block;
                 <div class='container row'>
                     <div class='footer-widgets-wrap'>
                         <b:section class='footer common-widget' id='footer-sec1' maxwidgets='3' name='Section (Left)' showaddelement='yes'>
-                            <b:widget id='Image1' locked='false' title='' type='Image' version='2' visible='true'>
+                            <b:widget id='Image1' locked='false' title='' type='Image' version='2' visible='false'>
                                 <b:widget-settings>
                                     <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEhXVC0obWgPhCO5bygCNhuMaKOvpSW-MwAxW-iVqQiRGY0zxSPrbDSlUopJJUZvRIEyFBXagdHfsk0g1SlDq-wCiBwHtMmwEXCXWl_B3xxzKgl4FO9a8dNapGxCloQojkwSVUYtZy_IWOcucYizGdnSD7aH7kn6H4NiwAfD0vy9T4LLwOqyHi_5KxsHMSGe=s285</b:widget-setting>
                                     <b:widget-setting name='displayHeight'>285</b:widget-setting>
-                                    <b:widget-setting name='sectionWidth'>282</b:widget-setting>
+                                    <b:widget-setting name='sectionWidth'>283</b:widget-setting>
                                     <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
                                     <b:widget-setting name='displayWidth'>282</b:widget-setting>
                                     <b:widget-setting name='link'/>
@@ -3291,7 +3310,7 @@ display:block;
                                     </div>
                                 </b:includable>
                             </b:widget>
-                            <b:widget id='HTML4' locked='false' title='' type='HTML' version='2' visible='true'>
+                            <b:widget id='HTML4' locked='false' title='' type='HTML' version='2' visible='false'>
                                 <b:widget-settings>
                                     <b:widget-setting name='content'><![CDATA[<div class="about">
 <p>MissKH9 offers in-depth tutorials on React, Vue, Angular, Linux, Docker, alongside free real projects, downloadable sources, and expert guidance. Elevate your development skills effortlessly!"</p>
@@ -3306,14 +3325,7 @@ display:block;
                             </b:widget>
                         </b:section>
                         <b:section class='footer common-widget' id='footer-sec2' maxwidgets='3' name='Section (Center)' showaddelement='yes'>
-                            <b:widget id='Label1' locked='false' title='Categories' type='Label' version='2' visible='true'>
-                                <b:widget-settings>
-                                    <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-                                    <b:widget-setting name='display'>CLOUD</b:widget-setting>
-                                    <b:widget-setting name='selectedLabelsList'>Beauty,Business,Fashion,Food,Learn,Music,Nature,People,Photography,Sports,Technology</b:widget-setting>
-                                    <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-                                    <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-                                </b:widget-settings>
+                            <b:widget id='Label1' locked='false' title='Categories' type='Label' version='2' visible='false'>
                                 <b:includable id='main' var='this'>
                                     <b:include name='widget-title'/>
                                     <b:include name='content'/>
@@ -3353,7 +3365,7 @@ display:block;
                                     </ul>
                                 </b:includable>
                             </b:widget>
-                            <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2' visible='true'>
+                            <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2' visible='false'>
                                 <b:includable id='main' var='this'>
                                     <b:include name='widget-title'/>
                                     <b:include name='content'/>
@@ -3384,7 +3396,7 @@ display:block;
                             </b:widget>
                         </b:section>
                         <b:section class='footer common-widget' id='footer-sec3' maxwidgets='3' name='Section (Right)' showaddelement='yes'>
-                            <b:widget id='PopularPosts2' locked='false' title='Most Popular' type='PopularPosts' version='2' visible='true'>
+                            <b:widget id='PopularPosts2' locked='false' title='Most Popular' type='PopularPosts' version='2' visible='false'>
                                 <b:widget-settings>
                                     <b:widget-setting name='numItemsToShow'>2</b:widget-setting>
                                     <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -3839,30 +3851,52 @@ display:block;
         <script src='//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js'/>
 
 
-        <script>
-            hljs.highlightAll();
-            // hljs.initLineNumbersOnLoad();
-        </script>
+        &lt;script&gt;
+        // Highlight all code blocks using highlight.js
+        hljs.highlightAll();
 
-        <script>
-            // Find elements with &#39;family&#39; attribute as &#39;font consolas&#39; and wrap their content
-            function wrapElements() {
-                var elements = document.querySelectorAll(&#39;[style*=&quot;font-family: Consolas&quot;]&#39;);
-                elements.forEach(function(element) {
-                    var content = element.innerHTML;
-                    var varElement = document.createElement(&#39;var&#39;);
-                    varElement.style.fontFamily = &#39;Consolas&#39;;
-                    varElement.innerHTML = content;
-                    element.innerHTML = &#39;&#39;;
-                    element.appendChild(varElement);
-                });
-            }
+        // Wrap elements with &#39;font-family: Consolas&#39; attribute
+        function wrapElements() {
+        // Find elements with &#39;font-family: Consolas&#39; style
+        var elements = document.querySelectorAll(&#39;[style*=&quot;font-family: Consolas&quot;]&#39;);
 
-            // Call the function when the document is ready
-            document.addEventListener(&quot;DOMContentLoaded&quot;, function() {
-                wrapElements();
-            });
-        </script>
+        // Wrap content of each element
+        elements.forEach(function(element) {
+        var content = element.innerHTML;
+        var varElement = document.createElement(&#39;var&#39;);
+        varElement.style.fontFamily = &#39;Consolas&#39;;
+        varElement.innerHTML = content;
+        element.innerHTML = &#39;&#39;; // Clear original content
+        element.appendChild(varElement); // Append wrapped content
+        });
+        }
+
+        // Call wrapElements function when the document is ready
+        document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+        wrapElements();
+
+        //////////////////////////////////// Hide comments boxes
+        function removeStyles() {
+        // Get all elements with the specified class
+        var elements = document.querySelectorAll(&#39;.blog-post-comments.comments-system-blogger&#39;);
+
+        // Loop through each element and remove its inline styles
+        elements.forEach(function(element) {
+        element.removeAttribute(&#39;style&#39;);
+        });
+        }
+
+        // Call the function initially
+        removeStyles();
+
+        // Call the function every 3 seconds
+        setInterval(removeStyles, 3000);
+
+        });
+        &lt;/script&gt;
+
+
+
 
         <!-- Google tag (gtag.js) -->
         <script async='async' src='https://www.googletagmanager.com/gtag/js?id=G-ZRZTCT3WXX'/>
@@ -3873,6 +3907,5 @@ display:block;
 
             gtag(&#39;config&#39;, &#39;G-ZRZTCT3WXX&#39;);
         </script>
-
     </body>
 </html>
